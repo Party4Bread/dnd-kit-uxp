@@ -109,7 +109,7 @@ export class AbstractPointerSensor implements SensorInstance {
 
     this.listeners.add(events.move.name, this.handleMove, {passive: false});
     this.listeners.add(events.end.name, this.handleEnd);
-    this.windowListeners.add(EventName.Resize, this.handleCancel);
+    //this.windowListeners.add(EventName.Resize, this.handleCancel);
     this.windowListeners.add(EventName.DragStart, preventDefault);
     this.windowListeners.add(EventName.VisibilityChange, this.handleCancel);
     this.windowListeners.add(EventName.ContextMenu, preventDefault);
@@ -247,6 +247,6 @@ export class AbstractPointerSensor implements SensorInstance {
   }
 
   private removeTextSelection() {
-    this.document.getSelection()?.removeAllRanges();
+    //this.document.getSelection()?.removeAllRanges();
   }
 }
